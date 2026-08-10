@@ -1,2 +1,5 @@
 # Polysim_Grip
-CAD file to create your own custom polysim grip
+
+CAD files for creating your own custom PolySim grip.
+
+![Polysim Grip screenshot](screenshot.png)

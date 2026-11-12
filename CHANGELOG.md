@@ -4,7 +4,12 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
+### Added
+- 3MF print file: `cad/3mf/grip G1.3mf`.
+
 ### Changed
+- STL files replaced with the correct printable parts: `export_linder_v2_1p`, `grip_singlepiece`,
+  `jonction_v2`, `plate`, `spacer-one-piece`.
 - Connection diagram redrawn from the grip and base PCB CAD: grip → GRIP_IN (Y encoder PCB) → GRIP (base PCB) → USB.
 - README: single download table with repo folders, "Get the kit" section with the assembly video, shorter firmware and I2C sections.
 

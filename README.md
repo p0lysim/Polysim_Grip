@@ -28,7 +28,7 @@ A 3D-printable joystick grip with a thumb stick and a side button. It talks to t
 | Files | Folder | Printables | Thingiverse | MakerWorld |
 |---|---|---|---|---|
 | **STL** – one per part | [`cad/stl`](cad/stl) | [Download](https://www.printables.com/model/1278269-3d-printable-flight-simulator-joystick-grip) | [Download](https://www.thingiverse.com/thing:6879827) | 🕒 Coming soon |
-| **3MF** – print plates | [`cad/3mf`](cad/3mf) *(coming soon)* | — | — | 🕒 Coming soon |
+| **3MF** – print plates | [`cad/3mf`](cad/3mf) | — | — | 🕒 Coming soon |
 | **STEP** – full assembly with PCB | [`cad/step`](cad/step) | — | — | — |
 
 ## 🛒 Get the kit

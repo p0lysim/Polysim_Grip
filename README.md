@@ -26,13 +26,14 @@
 
 A 3D-printable joystick grip with a thumb stick and a side button. It talks to the joystick base over I2C.
 
-<a href="https://github.com/p0lysim/Polysim_Base"><img src="docs/images/polysim-base.jpg" alt="Polysim Base joystick" width="130" align="left"></a>
-
-🔗 **Made for the [Polysim Base](https://github.com/p0lysim/Polysim_Base).**
+<table>
+<tr>
+<td width="140" valign="middle"><a href="https://github.com/p0lysim/Polysim_Base"><img src="docs/images/polysim-base.jpg" alt="Polysim Base joystick" width="130"></a></td>
+<td valign="middle">🔗 <b>Made for the <a href="https://github.com/p0lysim/Polysim_Base">Polysim Base</a>.</b><br>
 The grip locks onto the base with its knurled ring and plugs in through the 4-pole jack.
-The base reads it and sends everything to the PC over USB.
-
-<br clear="left">
+The base reads it and sends everything to the PC over USB.</td>
+</tr>
+</table>
 
 
 ## 📥 Download

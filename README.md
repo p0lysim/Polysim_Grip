@@ -7,13 +7,14 @@
 [![Printables](https://img.shields.io/badge/Printables-Download-FA6831?style=for-the-badge&logo=printables&logoColor=white)](https://www.printables.com/model/1278269-3d-printable-flight-simulator-joystick-grip)
 [![Thingiverse](https://img.shields.io/badge/Thingiverse-Download-248BFB?style=for-the-badge&logo=thingiverse&logoColor=white)](https://www.thingiverse.com/thing:6879827)
 [![MakerWorld](https://img.shields.io/badge/MakerWorld-Coming%20soon-9E9E9E?style=for-the-badge&logo=bambulab&logoColor=white)](#-download)
-[![Kit](https://img.shields.io/badge/Polysim%20Shop-Get%20the%20kit-111111?style=for-the-badge&logo=shopify&logoColor=white)](https://polysim.fr/products/polysim-grip-3d-printable-kit)
 
 [![License: Sustainable Use](https://img.shields.io/badge/License-Sustainable%20Use%201.0-blue.svg)](LICENSE.md)
 ![CAD: STEP AP214](https://img.shields.io/badge/CAD-STEP%20AP214-informational)
 ![Firmware: Arduino](https://img.shields.io/badge/Firmware-Arduino-00979D?logo=arduino&logoColor=white)
 
 <img src="docs/images/grip-g1-cover.jpg" alt="Polysim Grip G1 – 3D-printed grip held in hand" width="720">
+
+<a href="https://polysim.fr/products/polysim-grip-3d-printable-kit"><img src="docs/images/buy-kit.svg" alt="Buy the Polysim Grip kit on polysim.fr" width="380"></a>
 
 </div>
 
@@ -33,14 +34,21 @@ A 3D-printable joystick grip with a thumb stick and a side button. It talks to t
 
 ## 🛒 Get the kit
 
-Get the **[Polysim Grip – 3D printable kit](https://polysim.fr/products/polysim-grip-3d-printable-kit)**
-(main button + thumb stick), print the parts, then follow the
-**[assembly tutorial on YouTube](https://www.youtube.com/watch?v=2aSrMxbHL8U)**.
+The **[Polysim Grip kit](https://polysim.fr/products/polysim-grip-3d-printable-kit)** contains the illuminated
+button and the thumb stick: print the parts, then follow the assembly video.
+
+<p align="center">
+  <a href="https://polysim.fr/products/polysim-grip-3d-printable-kit"><img src="docs/images/buy-kit.svg" alt="Buy the Polysim Grip kit on polysim.fr" width="380"></a>
+</p>
+
+| Exploded view | Assembly tutorial |
+|:---:|:---:|
+| <img src="docs/images/grip-exploded.gif" alt="Rotating exploded view of the Polysim Grip G1" width="200"> | <a href="https://www.youtube.com/watch?v=2aSrMxbHL8U"><img src="https://img.youtube.com/vi/2aSrMxbHL8U/hqdefault.jpg" alt="Polysim grip G1 assembly tutorial" width="360"></a> |
 
 ## 🔌 How it connects
 
 <p align="center">
-  <img src="docs/images/wiring.svg" alt="Connection diagram: grip PCB to the Y encoder PCB (GRIP_IN) and the base PCB (GRIP) over a 4-wire I2C cable, base to the PC over USB" width="900">
+  <img src="docs/images/wiring.svg" alt="Connection diagram from PCB renders: thumb stick on CN1, side button on U7, grip U5 to GRIP_IN on the Y encoder PCB, GRIP OUT to GRIP on the base PCB, X and Y encoders on ENC_X and ENC_Y, base to the PC over USB-C" width="900">
 </p>
 
 More details are in [docs/hardware.md](docs/hardware.md).
@@ -53,7 +61,7 @@ The grip PCB has no USB port: flash it through its **ICSP header (J1)** with a U
 2. Select **Tools → Board → Arduino Nano**, then **Tools → Programmer → USBasp** (or *Arduino as ISP*).
 3. Connect the programmer to J1, then click **Sketch → Upload Using Programmer**.
 
-> ⚠️ Don't use *Burn Bootloader*: it can make the grip PCB stop responding.
+On a brand-new chip, run **Tools → Burn Bootloader** once first: it sets the fuses for the 16 MHz crystal.
 
 ## 📡 I2C protocol
 

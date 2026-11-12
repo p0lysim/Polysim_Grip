@@ -12,6 +12,7 @@ It is written for people who implement the joystick base (the I2C master).
 | 7-bit address | **`0x55`** |
 | Clock | Set by the master. 100 kHz (Arduino default) or 400 kHz |
 | Pull-ups | Internal pull-ups are enabled on the grip; external pull-ups (e.g. 4.7 kΩ) are recommended |
+| On the Polysim base | The grip sits on channel 2 of a PCA9548A I2C multiplexer (address `0x70`); select that channel before talking to `0x55` |
 
 ## Transaction model
 

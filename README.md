@@ -13,7 +13,7 @@
 ![CAD: STEP AP214](https://img.shields.io/badge/CAD-STEP%20AP214-informational)
 ![Firmware: Arduino](https://img.shields.io/badge/Firmware-Arduino-00979D?logo=arduino&logoColor=white)
 
-<img src="docs/images/grip-g1.png" alt="Polysim Grip G1 – CAD render" width="420">
+<img src="docs/images/grip-g1-cover.jpg" alt="Polysim Grip G1 – 3D-printed grip held in hand" width="720">
 
 </div>
 

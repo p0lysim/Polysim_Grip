@@ -5,11 +5,11 @@ All notable changes to this project are documented in this file.
 ## [Unreleased]
 
 ### Added
-- Rotating exploded-view GIF (`docs/images/grip-exploded.gif`), rendered from the Fusion assembly.
-- "Buy the Grip kit" button and YouTube thumbnail for the assembly tutorial.
+- Rotating exploded-view GIF (`docs/images/grip-exploded.gif`), rendered in Blender (Cycles) from the Fusion assembly, with a step-by-step disassembly so no part passes through another.
+- "Buy the kit" button and YouTube thumbnail for the assembly tutorial; the kit text states that every component is included (print the plastic parts in PLA or PETG).
 
 ### Changed
-- Connection diagram rebuilt from renders of the grip, Y encoder, X encoder and base PCBs, with each wire
+- Connection diagram rebuilt from renders of the grip, Y encoder, X encoder and base PCBs, in two separate GRIP / BASE boxes, with each wire
   on the right connector and pin names from the EasyEDA design files.
 - `docs/hardware.md`: connection table (CN1, U7, U5, GRIP_IN, GRIP, ENC_X, ENC_Y, USB-C).
 - Firmware: the grip PCB has a 16 MHz crystal, so *Burn Bootloader* is fine on a new chip.

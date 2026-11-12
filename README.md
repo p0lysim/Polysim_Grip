@@ -14,7 +14,7 @@
 
 <img src="docs/images/grip-g1-cover.jpg" alt="Polysim Grip G1 – 3D-printed grip held in hand" width="720">
 
-<a href="https://polysim.fr/products/polysim-grip-3d-printable-kit"><img src="docs/images/buy-kit.svg" alt="Buy the Polysim Grip kit on polysim.fr" width="380"></a>
+<a href="https://polysim.fr/products/polysim-grip-3d-printable-kit"><img src="docs/images/buy-kit.svg" alt="Buy the Polysim Grip kit on polysim.fr" width="236"></a>
 
 </div>
 
@@ -34,16 +34,16 @@ A 3D-printable joystick grip with a thumb stick and a side button. It talks to t
 
 ## 🛒 Get the kit
 
-The **[Polysim Grip kit](https://polysim.fr/products/polysim-grip-3d-printable-kit)** contains the illuminated
-button and the thumb stick: print the parts, then follow the assembly video.
+The **[Polysim Grip kit](https://polysim.fr/products/polysim-grip-3d-printable-kit)** contains **every component
+needed for the assembly**. You only have to **print the plastic parts in PLA or PETG**, then follow the assembly video.
 
 <p align="center">
-  <a href="https://polysim.fr/products/polysim-grip-3d-printable-kit"><img src="docs/images/buy-kit.svg" alt="Buy the Polysim Grip kit on polysim.fr" width="380"></a>
+  <a href="https://polysim.fr/products/polysim-grip-3d-printable-kit"><img src="docs/images/buy-kit.svg" alt="Buy the Polysim Grip kit on polysim.fr" width="236"></a>
 </p>
 
 | Exploded view | Assembly tutorial |
 |:---:|:---:|
-| <img src="docs/images/grip-exploded.gif" alt="Rotating exploded view of the Polysim Grip G1" width="200"> | <a href="https://www.youtube.com/watch?v=2aSrMxbHL8U"><img src="https://img.youtube.com/vi/2aSrMxbHL8U/hqdefault.jpg" alt="Polysim grip G1 assembly tutorial" width="360"></a> |
+| <img src="docs/images/grip-exploded.gif" alt="Rotating exploded view of the Polysim Grip G1" width="240"> | <a href="https://www.youtube.com/watch?v=2aSrMxbHL8U"><img src="https://img.youtube.com/vi/2aSrMxbHL8U/hqdefault.jpg" alt="Polysim grip G1 assembly tutorial" width="360"></a> |
 
 ## 🔌 How it connects
 

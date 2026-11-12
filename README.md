@@ -7,6 +7,7 @@
 [![Printables](https://img.shields.io/badge/Printables-Download-FA6831?style=for-the-badge&logo=printables&logoColor=white)](https://www.printables.com/model/1278269-3d-printable-flight-simulator-joystick-grip)
 [![Thingiverse](https://img.shields.io/badge/Thingiverse-Download-248BFB?style=for-the-badge&logo=thingiverse&logoColor=white)](https://www.thingiverse.com/thing:6879827)
 [![MakerWorld](https://img.shields.io/badge/MakerWorld-Coming%20soon-9E9E9E?style=for-the-badge&logo=bambulab&logoColor=white)](#-download)
+[![Kit](https://img.shields.io/badge/Polysim%20Shop-Get%20the%20kit-111111?style=for-the-badge&logo=shopify&logoColor=white)](https://polysim.fr/products/polysim-grip-3d-printable-kit)
 
 [![License: Sustainable Use](https://img.shields.io/badge/License-Sustainable%20Use%201.0-blue.svg)](LICENSE.md)
 ![CAD: STEP AP214](https://img.shields.io/badge/CAD-STEP%20AP214-informational)
@@ -18,32 +19,13 @@
 
 ---
 
-## Table of contents
-
-- [Overview](#-overview)
-- [Download](#-download)
-- [Repository structure](#-repository-structure)
-- [Hardware](#-hardware)
-- [Firmware](#-firmware)
-- [I2C protocol](#-i2c-protocol)
-- [Customizing the grip](#-customizing-the-grip)
-- [License](#-license)
-- [Contributing](#-contributing)
-
 ## 🎯 Overview
 
-The **Polysim Grip G1** is a joystick handle for flight simulators, designed in Autodesk Fusion and built to
-be 3D printed at home.
+A 3D-printable flight sim joystick grip with an **analog thumb stick** (X/Y + click) and a **side button**.
+An onboard Arduino-compatible microcontroller sends the inputs to the joystick base over **I2C**
+(address `0x55`). A knurled ring locks the grip onto the base.
 
-- **Ergonomic curved shell** with a flared palm rest.
-- **Analog thumb stick** (X/Y axes + push click) on the top plate.
-- **Side push button**.
-- **Embedded PCB** with an Arduino-compatible microcontroller that digitizes every input.
-- **I2C slave interface** (address `0x55`): the joystick base reads the grip over SDA/SCL.
-- **Knurled locking ring** that screws the grip onto the base.
-
-This repository holds the **source files**: the complete CAD assembly (STEP), the grip firmware and its
-documentation. Printable files and print settings are on the model pages listed below.
+This repository contains the CAD files (STL + STEP), the firmware and the technical docs.
 
 ## 📥 Download
 
@@ -53,66 +35,51 @@ documentation. Printable files and print settings are on the model pages listed 
 | **Thingiverse** | ✅ Available | [thing:6879827](https://www.thingiverse.com/thing:6879827) |
 | **MakerWorld** | 🕒 Coming soon | — |
 
-The editable CAD source is in [`cad/grip-g1.step`](cad/grip-g1.step).
+The CAD files are also in this repository:
 
-## 📁 Repository structure
-
-```
-Polysim_Grip/
-├── cad/
-│   └── grip-g1.step            Full CAD assembly (shell, button, thumb stick, PCB) – STEP AP214, mm
-├── firmware/
-│   └── polysim_grip/
-│       └── polysim_grip.ino    Grip firmware (Arduino, I2C slave)
-├── docs/
-│   ├── hardware.md             Assembly tree, PCB components, wiring
-│   ├── i2c-protocol.md         Register map and master-side example
-│   └── images/
-│       └── grip-g1.png         CAD render
-├── CHANGELOG.md
-├── LICENSE.md
-└── README.md
-```
+| Folder | Content |
+|---|---|
+| [`cad/stl/`](cad/stl) | One STL per printable part (mm, assembly orientation: rotate each part flat in your slicer) |
+| [`cad/step/`](cad/step) | Full assembly as STEP, including the PCB and electronic components |
+| [`cad/3mf/`](cad/3mf) | Ready-to-print plates (coming soon) |
 
 ## 🔧 Hardware
 
-The CAD assembly contains three sub-assemblies:
+### 🛒 Get the kit
 
-| Part | Description |
-|---|---|
-| `Grip G1` | Shell, top plate, collar and knurled locking ring |
-| `Joystick V2` | Analog thumb stick with push click |
-| `Button` | Side momentary push button |
-| `PCB_GRIP_V2` | Grip electronics: microcontroller, power, connectors, status LED |
+The easiest way to build the grip is the
+**[Polysim Grip – 3D printable kit](https://polysim.fr/products/polysim-grip-3d-printable-kit)**
+from the Polysim shop, with the main button and the thumb stick. Print the parts, then assemble them with the kit.
 
-### Wiring (from the firmware)
+### How it connects
 
-| Input / output | MCU pin | Notes |
-|---|---|---|
-| Side button | `A0` | Internal pull-up, active low |
-| Thumb stick click | `A1` | Internal pull-up, active low |
-| Thumb stick X axis | `A2` | Analog, 10-bit |
-| Thumb stick Y axis | `A3` | Analog, 10-bit |
-| Status LED | `D2` | On when the firmware is running |
-| I2C SDA / SCL | `A4` / `A5` | To the joystick base |
+<p align="center">
+  <img src="docs/images/wiring.svg" alt="Connection diagram: thumb stick and side button wired to the grip PCB (ATmega328P), which talks to the joystick base over a 4-wire I2C cable" width="860">
+</p>
 
-See [docs/hardware.md](docs/hardware.md) for the full component list.
+More details are in [docs/hardware.md](docs/hardware.md).
 
 ## 💾 Firmware
 
-The firmware targets an **ATmega328P**-based board (Arduino Nano, Pro Mini, Uno, or the MCU on the grip PCB).
-It only uses the standard `Wire` library.
+The firmware runs on the **ATmega328P** of the grip PCB. It only uses the built-in `Wire` library,
+so there is nothing to install. The grip PCB has **no USB port**: you program it through its
+**ICSP header (J1, 2×3 pins)** with an ISP programmer (a USBasp, or a spare Arduino flashed with *Arduino as ISP*).
 
-**Arduino IDE:** open `firmware/polysim_grip/polysim_grip.ino`, select your board, then click *Upload*.
+### Upload with the Arduino IDE
 
-**arduino-cli:**
+1. **Install the Arduino IDE** (2.x) from [arduino.cc/en/software](https://www.arduino.cc/en/software).
+2. **Download this repository** (*Code → Download ZIP*) and unzip it.
+3. In the IDE, open **File → Open…** and select `firmware/polysim_grip/polysim_grip.ino`.
+4. Select **Tools → Board → Arduino AVR Boards → Arduino Nano** (ATmega328P).
+5. Select your programmer in **Tools → Programmer**: **USBasp**, or **Arduino as ISP**.
+6. Connect the programmer to the **ICSP header J1** of the grip PCB. Pin 1 is MISO; match it with the programmer cable.
+7. Click **Sketch → Upload Using Programmer** (`Ctrl+Shift+U`). Wait until the IDE says *Done uploading*.
+8. Unplug the programmer and connect the grip to the base. The **status LED lights up**: the grip is ready.
 
-```bash
-arduino-cli compile --fqbn arduino:avr:nano firmware/polysim_grip
-arduino-cli upload  --fqbn arduino:avr:nano -p <PORT> firmware/polysim_grip
-```
+> ⚠️ **Do not click *Tools → Burn Bootloader*.** It rewrites the chip's clock fuses and can make the grip PCB stop responding.
 
-When powered, the status LED turns on and the grip answers on I2C address `0x55`.
+> **Prototyping on a regular Arduino Nano?** Plug it in with USB, pick its port in **Tools → Port**,
+> then click **Upload** (➜). If it fails on a clone, set **Tools → Processor → ATmega328P (Old Bootloader)**.
 
 ## 🔌 I2C protocol
 
@@ -127,14 +94,6 @@ The joystick base (I2C master) writes a register number, then reads the value:
 
 The full specification and a master-side Arduino example are in [docs/i2c-protocol.md](docs/i2c-protocol.md).
 
-## ✏️ Customizing the grip
-
-1. Open `cad/grip-g1.step` in Fusion, FreeCAD, SolidWorks, Onshape, or any CAD tool that reads STEP.
-2. Edit the shell to fit your hand, or add button holes.
-3. Export each part as STL/3MF and slice it.
-
-The PCB and the thumb stick are part of the assembly, so you can check clearances before printing.
-
 ## 📄 License
 
 Released under the [Sustainable Use License 1.0](LICENSE.md):
@@ -143,8 +102,3 @@ Released under the [Sustainable Use License 1.0](LICENSE.md):
 - ❌ Commercial use (for example selling printed grips or kits) is not permitted.
 
 Redistributed copies must include the license, and modified copies must say they were modified.
-
-## 🤝 Contributing
-
-Issues and pull requests are welcome: bug reports, firmware improvements, printing feedback or remixes.
-If you print the grip, please share a make on Printables or Thingiverse.

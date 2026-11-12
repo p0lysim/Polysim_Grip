@@ -5,6 +5,19 @@ All notable changes to this project are documented in this file.
 ## [Unreleased]
 
 ### Added
+- One STL per printable part in `cad/stl/` (19 files, exported from Fusion revision v91).
+- `cad/3mf/` folder for ready-to-print plates (empty for now).
+- Connection diagram (`docs/images/wiring.svg`).
+- Link to the Polysim Grip 3D printable kit.
+- Arduino IDE upload procedure via the ICSP header.
+
+### Changed
+- Full assembly STEP moved to `cad/step/grip-g1.step`.
+- README shortened; `docs/hardware.md` simplified around the connection diagram.
+
+## 2026-11 – Repository reorganization
+
+### Added
 - Grip firmware (`firmware/polysim_grip/polysim_grip.ino`).
 - Documentation: hardware overview and I2C protocol (`docs/`).
 - Download links to Printables and Thingiverse (MakerWorld coming soon).

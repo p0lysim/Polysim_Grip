@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+
+# Arduino / PlatformIO build output
+build/
+.pio/
+
+# CAD temporary / backup files
+*.bak
+*.tmp
+*~lock*

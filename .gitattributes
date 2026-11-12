@@ -1,0 +1,12 @@
+# Text files: let git normalize line endings
+* text=auto
+
+# CAD exports are huge generated text files: never diff them, hide them from language stats
+*.step -diff linguist-generated
+*.stp  -diff linguist-generated
+
+# Binary assets
+*.png binary
+*.jpg binary
+*.3mf binary
+*.stl -diff

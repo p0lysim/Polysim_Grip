@@ -1,114 +1,132 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="960" height="500" font-family="Segoe UI, Helvetica, Arial, sans-serif">
-  <title>Polysim Grip G1 – how everything connects</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="1000" height="540" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <title>Polysim Grip G1 – how it connects to the base</title>
   <style>
-    .box   { fill: #f7f9fc; stroke: #37474f; stroke-width: 2; }
-    .pcb   { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 2.5; }
-    .base  { fill: #f3e5f5; stroke: #6a1b9a; stroke-width: 2; }
-    .prog  { fill: #fffde7; stroke: #f9a825; stroke-width: 2; stroke-dasharray: 6 4; }
-    .tag   { fill: #ffffff; stroke: #81c784; stroke-width: 1.5; }
-    .title { font-size: 16px; font-weight: 700; fill: #263238; }
-    .sub   { font-size: 12px; fill: #607d8b; }
-    .pin   { font-size: 13px; font-weight: 600; fill: #263238; }
-    .lbl   { font-size: 12px; font-weight: 600; }
-    .tagt  { font-size: 12px; fill: #2e7d32; font-weight: 600; }
-    .tags  { font-size: 11px; fill: #607d8b; }
-    .note  { font-size: 13px; fill: #455a64; }
-    .w     { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-    .v5    { stroke: #d32f2f; }
-    .gnd   { stroke: #424242; }
-    .ana   { stroke: #ef6c00; }
-    .btn   { stroke: #8e24aa; }
-    .sda   { stroke: #1e88e5; }
-    .scl   { stroke: #43a047; }
+    .group  { fill: none; stroke: #b0bec5; stroke-width: 2; stroke-dasharray: 8 6; }
+    .gtitle { font-size: 13px; font-weight: 800; fill: #78909c; letter-spacing: 2px; }
+    .box    { fill: #f7f9fc; stroke: #37474f; stroke-width: 2; }
+    .pcb    { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 2.5; }
+    .enc    { fill: #e3f2fd; stroke: #1565c0; stroke-width: 2; }
+    .pc     { fill: #f3e5f5; stroke: #6a1b9a; stroke-width: 2; }
+    .prog   { fill: #fffde7; stroke: #f9a825; stroke-width: 2; stroke-dasharray: 6 4; }
+    .title  { font-size: 15px; font-weight: 700; fill: #263238; }
+    .sub    { font-size: 12px; fill: #607d8b; }
+    .chip   { font-size: 12px; font-weight: 700; fill: #ffffff; }
+    .conn   { font-size: 11px; font-weight: 700; fill: #263238; }
+    .lbl    { font-size: 12px; font-weight: 600; fill: #455a64; }
+    .w      { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .v5 { stroke: #d32f2f; } .gnd { stroke: #424242; } .sda { stroke: #1e88e5; } .scl { stroke: #43a047; }
+    .sig    { fill: none; stroke: #8e24aa; stroke-width: 3; stroke-linecap: round; }
+    .encw   { fill: none; stroke: #1565c0; stroke-width: 3; stroke-linecap: round; }
   </style>
 
-  <rect x="1" y="1" width="958" height="498" rx="14" fill="#ffffff" stroke="#cfd8dc" stroke-width="2"/>
+  <rect x="1" y="1" width="998" height="538" rx="14" fill="#ffffff" stroke="#cfd8dc" stroke-width="2"/>
 
-  <!-- ================= Thumb stick ================= -->
-  <rect class="box" x="30" y="45" width="200" height="165" rx="10"/>
-  <text x="45" y="72" class="title">Thumb stick</text>
-  <text x="45" y="89" class="sub">Joystick V2 · X / Y + click</text>
-  <circle cx="85" cy="150" r="30" fill="#eceff1" stroke="#90a4ae" stroke-width="2"/>
-  <circle cx="85" cy="150" r="13" fill="#b0bec5"/>
-  <text x="222" y="80"  class="pin" text-anchor="end" style="fill:#d32f2f">VCC</text>
-  <text x="222" y="105" class="pin" text-anchor="end">GND</text>
-  <text x="222" y="135" class="pin" text-anchor="end" style="fill:#ef6c00">X</text>
-  <text x="222" y="165" class="pin" text-anchor="end" style="fill:#ef6c00">Y</text>
-  <text x="222" y="195" class="pin" text-anchor="end" style="fill:#8e24aa">SW</text>
+  <!-- ===================== GRIP ===================== -->
+  <rect class="group" x="20" y="20" width="350" height="450" rx="14"/>
+  <text x="40" y="44" class="gtitle">GRIP</text>
 
-  <!-- ================= Side button ================= -->
-  <rect class="box" x="30" y="290" width="200" height="100" rx="10"/>
-  <text x="45" y="317" class="title">Side button</text>
-  <text x="45" y="334" class="sub">Momentary, to GND</text>
-  <circle cx="85" cy="362" r="16" fill="#ffffff" stroke="#8e24aa" stroke-width="2.5"/>
-  <circle cx="85" cy="362" r="8" fill="#ce93d8"/>
-  <text x="222" y="335" class="pin" text-anchor="end" style="fill:#8e24aa">SIG</text>
-  <text x="222" y="370" class="pin" text-anchor="end">GND</text>
+  <!-- thumb stick -->
+  <rect class="box" x="40" y="70" width="130" height="90" rx="10"/>
+  <text x="105" y="98" class="title" text-anchor="middle">Thumb stick</text>
+  <circle cx="105" cy="128" r="18" fill="#eceff1" stroke="#90a4ae" stroke-width="2"/>
+  <circle cx="105" cy="128" r="7" fill="#b0bec5"/>
+  <!-- side button -->
+  <rect class="box" x="40" y="190" width="130" height="80" rx="10"/>
+  <text x="105" y="218" class="title" text-anchor="middle">Side button</text>
+  <circle cx="105" cy="243" r="13" fill="#ffffff" stroke="#8e24aa" stroke-width="2.5"/>
+  <circle cx="105" cy="243" r="6" fill="#ce93d8"/>
 
-  <!-- ================= Grip PCB ================= -->
-  <rect class="pcb" x="330" y="30" width="300" height="400" rx="14"/>
-  <text x="480" y="56" class="title" text-anchor="middle">Grip PCB V2</text>
-  <text x="480" y="72" class="sub" text-anchor="middle">inside the grip head</text>
+  <!-- grip PCB -->
+  <rect class="pcb" x="210" y="70" width="140" height="270" rx="12"/>
+  <text x="280" y="96" class="title" text-anchor="middle">Grip PCB V2</text>
+  <rect x="228" y="112" width="104" height="62" rx="5" fill="#263238"/>
+  <text x="280" y="138" class="chip" text-anchor="middle">ATmega328P</text>
+  <text x="280" y="156" font-size="11" fill="#b0bec5" text-anchor="middle">I2C slave 0x55</text>
+  <rect x="228" y="292" width="104" height="30" rx="6" fill="#ffffff" stroke="#f9a825" stroke-width="2"/>
+  <text x="280" y="312" class="conn" text-anchor="middle" style="fill:#f57f17">ICSP · J1</text>
 
-  <!-- MCU -->
-  <rect x="440" y="95" width="140" height="175" rx="6" fill="#263238"/>
-  <text x="510" y="172" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">ATmega328P</text>
-  <text x="510" y="190" font-size="11" fill="#b0bec5" text-anchor="middle">U1 · TQFP-32</text>
-  <text x="510" y="206" font-size="11" fill="#b0bec5" text-anchor="middle">I2C slave 0x55</text>
+  <!-- inputs -->
+  <path class="sig" d="M170 115 H228"/>
+  <text x="199" y="108" class="lbl" text-anchor="middle">X Y SW</text>
+  <path class="sig" d="M170 230 H200 V160 H228"/>
+  <text x="185" y="223" class="lbl" text-anchor="middle">SIG</text>
 
-  <!-- stick -> PCB -->
-  <path class="w v5"  d="M230 75 H330"/>
-  <text x="338" y="80" class="lbl" style="fill:#d32f2f">5V</text>
-  <path class="w gnd" d="M230 100 H330"/>
-  <text x="338" y="105" class="lbl" style="fill:#424242">GND</text>
-  <path class="w ana" d="M230 130 H440"/>
-  <text x="432" y="124" class="lbl" text-anchor="end" style="fill:#ef6c00">A2</text>
-  <path class="w ana" d="M230 160 H440"/>
-  <text x="432" y="154" class="lbl" text-anchor="end" style="fill:#ef6c00">A3</text>
-  <path class="w btn" d="M230 190 H440"/>
-  <text x="432" y="184" class="lbl" text-anchor="end" style="fill:#8e24aa">A1</text>
+  <!-- ISP programmer -->
+  <path d="M280 322 V390" fill="none" stroke="#f9a825" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <rect class="prog" x="190" y="390" width="160" height="62" rx="10"/>
+  <text x="270" y="414" class="title" text-anchor="middle" style="font-size:13px">ISP programmer</text>
+  <text x="270" y="432" class="sub" text-anchor="middle">USBasp / Arduino as ISP</text>
+  <text x="270" y="446" class="sub" text-anchor="middle">firmware upload only</text>
 
-  <!-- button -> PCB -->
-  <path class="w btn" d="M230 330 H410 V250 H440"/>
-  <text x="432" y="244" class="lbl" text-anchor="end" style="fill:#8e24aa">A0</text>
-  <path class="w gnd" d="M230 365 H330"/>
-  <text x="338" y="370" class="lbl" style="fill:#424242">GND</text>
+  <!-- ===================== 4-wire grip cable ===================== -->
+  <path class="w v5"  d="M350 214 H470"/>
+  <path class="w gnd" d="M350 222 H470"/>
+  <path class="w sda" d="M350 230 H470"/>
+  <path class="w scl" d="M350 238 H470"/>
+  <text x="410" y="190" class="lbl" text-anchor="middle">4-wire</text>
+  <text x="410" y="204" class="lbl" text-anchor="middle">cable</text>
+  <text x="410" y="258" class="sub" text-anchor="middle">bottom</text>
+  <text x="410" y="272" class="sub" text-anchor="middle">connector</text>
 
-  <!-- on-board parts -->
-  <rect class="tag" x="455" y="290" width="160" height="28" rx="6"/>
-  <text x="465" y="309" class="tagt">DC/DC regulator</text><text x="605" y="309" class="tags" text-anchor="end">U4 L1 D1</text>
-  <rect class="tag" x="455" y="324" width="160" height="28" rx="6"/>
-  <text x="465" y="343" class="tagt">Reset button</text><text x="605" y="343" class="tags" text-anchor="end">SW1</text>
-  <rect class="tag" x="455" y="358" width="160" height="28" rx="6"/>
-  <text x="465" y="377" class="tagt">Status LEDs</text><text x="605" y="377" class="tags" text-anchor="end">LED1 LED4</text>
-  <rect class="tag" x="455" y="392" width="160" height="28" rx="6" style="stroke:#f9a825"/>
-  <text x="465" y="411" class="tagt" style="fill:#f57f17">ICSP header</text><text x="605" y="411" class="tags" text-anchor="end">J1 · 2×3</text>
+  <!-- ===================== BASE ===================== -->
+  <rect class="group" x="450" y="20" width="530" height="450" rx="14"/>
+  <text x="470" y="44" class="gtitle">BASE</text>
 
-  <!-- PCB -> base -->
-  <path class="w sda" d="M580 150 H760"/>
-  <text x="695" y="143" class="lbl" text-anchor="middle" style="fill:#1e88e5">SDA · A4</text>
-  <path class="w scl" d="M580 190 H760"/>
-  <text x="695" y="183" class="lbl" text-anchor="middle" style="fill:#43a047">SCL · A5</text>
-  <path class="w v5"  d="M630 110 H760"/>
-  <text x="622" y="115" class="lbl" text-anchor="end" style="fill:#d32f2f">VCC</text>
-  <path class="w gnd" d="M630 230 H760"/>
-  <text x="622" y="235" class="lbl" text-anchor="end" style="fill:#424242">GND</text>
-  <text x="695" y="88" class="sub" text-anchor="middle">4-wire cable</text>
-  <text x="695" y="262" class="sub" text-anchor="middle">bottom connector</text>
+  <!-- X encoder -->
+  <rect class="enc" x="490" y="70" width="160" height="70" rx="10"/>
+  <text x="570" y="100" class="title" text-anchor="middle">X encoder PCB</text>
+  <text x="570" y="118" class="sub" text-anchor="middle">magnetic sensor</text>
 
-  <!-- ================= Base ================= -->
-  <rect class="base" x="760" y="85" width="170" height="170" rx="10"/>
-  <text x="845" y="160" class="title" text-anchor="middle">Joystick base</text>
-  <text x="845" y="178" class="sub" text-anchor="middle">I2C master</text>
-  <text x="845" y="194" class="sub" text-anchor="middle">→ USB to the PC</text>
+  <!-- Y encoder with GRIP_IN -->
+  <rect class="enc" x="490" y="180" width="160" height="110" rx="10"/>
+  <rect x="470" y="206" width="56" height="40" rx="5" fill="#66bb6a" stroke="#2e7d32" stroke-width="2"/>
+  <text x="498" y="223" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">GRIP</text>
+  <text x="498" y="236" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">_IN</text>
+  <text x="590" y="214" class="title" text-anchor="middle">Y encoder</text>
+  <text x="590" y="232" class="title" text-anchor="middle">PCB</text>
+  <text x="590" y="250" class="sub" text-anchor="middle">magnetic sensor</text>
+  <text x="590" y="266" class="sub" text-anchor="middle">+ grip input</text>
 
-  <!-- ================= Programmer ================= -->
-  <path d="M615 406 H690 V385" fill="none" stroke="#f9a825" stroke-width="2.5" stroke-dasharray="6 4"/>
-  <rect class="prog" x="690" y="320" width="240" height="65" rx="10"/>
-  <text x="810" y="345" class="title" text-anchor="middle" style="font-size:14px">ISP programmer</text>
-  <text x="810" y="362" class="sub" text-anchor="middle">USBasp or Arduino as ISP</text>
-  <text x="810" y="377" class="sub" text-anchor="middle">firmware upload only</text>
+  <!-- base PCB -->
+  <rect class="pcb" x="760" y="70" width="200" height="270" rx="12"/>
+  <text x="860" y="96" class="title" text-anchor="middle">Base PCB V2</text>
+  <rect x="808" y="160" width="130" height="62" rx="5" fill="#263238"/>
+  <text x="873" y="186" class="chip" text-anchor="middle">ATmega32U4</text>
+  <text x="873" y="204" font-size="11" fill="#b0bec5" text-anchor="middle">I2C master · USB</text>
+  <!-- connectors on left edge -->
+  <rect x="742" y="96" width="52" height="24" rx="4" fill="#ffffff" stroke="#37474f" stroke-width="1.5"/>
+  <text x="768" y="112" class="conn" text-anchor="middle">ENC_1</text>
+  <rect x="742" y="214" width="52" height="24" rx="4" fill="#ffffff" stroke="#37474f" stroke-width="1.5"/>
+  <text x="768" y="230" class="conn" text-anchor="middle">GRIP</text>
+  <rect x="742" y="262" width="52" height="24" rx="4" fill="#ffffff" stroke="#37474f" stroke-width="1.5"/>
+  <text x="768" y="278" class="conn" text-anchor="middle">ENC_2</text>
 
-  <!-- ================= Notes ================= -->
-  <text x="30" y="470" class="note">Buttons are active-low (internal pull-ups) · Axes are 10-bit (0–1023) · The grip answers the base on I2C address 0x55</text>
+  <!-- X encoder -> ENC_1 -->
+  <path class="encw" d="M650 108 H742"/>
+  <text x="696" y="100" class="lbl" text-anchor="middle">X angle</text>
+  <!-- Y encoder: grip pass-through -> GRIP -->
+  <path class="w v5"  d="M650 214 H742"/>
+  <path class="w gnd" d="M650 222 H742"/>
+  <path class="w sda" d="M650 230 H742"/>
+  <path class="w scl" d="M650 238 H742"/>
+  <text x="696" y="204" class="lbl" text-anchor="middle">grip</text>
+  <!-- Y encoder -> ENC_2 -->
+  <path class="encw" d="M650 274 H742"/>
+  <text x="696" y="294" class="lbl" text-anchor="middle">Y angle</text>
+
+  <!-- USB to PC -->
+  <path d="M860 340 V400" fill="none" stroke="#6a1b9a" stroke-width="3" stroke-linecap="round"/>
+  <text x="872" y="375" class="lbl">USB</text>
+  <rect class="pc" x="790" y="400" width="140" height="50" rx="10"/>
+  <text x="860" y="423" class="title" text-anchor="middle">PC</text>
+  <text x="860" y="440" class="sub" text-anchor="middle">game controller</text>
+
+  <!-- legend -->
+  <g font-size="12" fill="#455a64">
+    <line x1="30" y1="505" x2="52" y2="505" stroke="#d32f2f" stroke-width="3"/><text x="58" y="509">VCC</text>
+    <line x1="100" y1="505" x2="122" y2="505" stroke="#424242" stroke-width="3"/><text x="128" y="509">GND</text>
+    <line x1="172" y1="505" x2="194" y2="505" stroke="#1e88e5" stroke-width="3"/><text x="200" y="509">SDA</text>
+    <line x1="242" y1="505" x2="264" y2="505" stroke="#43a047" stroke-width="3"/><text x="270" y="509">SCL</text>
+    <text x="330" y="509">· The base polls the grip over I2C (address 0x55) and sends everything to the PC over USB.</text>
+  </g>
 </svg>

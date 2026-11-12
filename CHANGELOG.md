@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
+### Changed
+- Connection diagram redrawn from the grip and base PCB CAD: grip → GRIP_IN (Y encoder PCB) → GRIP (base PCB) → USB.
+- README: single download table with repo folders, "Get the kit" section with the assembly video, shorter firmware and I2C sections.
+
+## 2026-11 – STL parts and connection diagram
+
 ### Added
 - One STL per printable part in `cad/stl/` (19 files, exported from Fusion revision v91).
 - `cad/3mf/` folder for ready-to-print plates (empty for now).

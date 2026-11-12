@@ -4,6 +4,8 @@
 
 **An open, 3D-printable flight simulator joystick grip with a thumb stick, a side button and an I2C interface.**
 
+[![Compatible with Polysim Base](https://img.shields.io/badge/Compatible%20with-Polysim%20Base-1f6feb?style=for-the-badge&logo=github&logoColor=white)](https://github.com/p0lysim/Polysim_Base)
+
 [![Printables](https://img.shields.io/badge/Printables-Download-FA6831?style=for-the-badge&logo=printables&logoColor=white)](https://www.printables.com/model/1278269-3d-printable-flight-simulator-joystick-grip)
 [![Thingiverse](https://img.shields.io/badge/Thingiverse-Download-248BFB?style=for-the-badge&logo=thingiverse&logoColor=white)](https://www.thingiverse.com/thing:6879827)
 [![MakerWorld](https://img.shields.io/badge/MakerWorld-Coming%20soon-9E9E9E?style=for-the-badge&logo=bambulab&logoColor=white)](#-download)
@@ -23,6 +25,9 @@
 ## 🎯 Overview
 
 A 3D-printable joystick grip with a thumb stick and a side button. It talks to the joystick base over I2C.
+
+> 🔗 **Made for the [Polysim Base](https://github.com/p0lysim/Polysim_Base).** The grip locks onto the base with its
+> knurled ring and plugs in through the 4-pole jack. The base reads it and sends everything to the PC over USB.
 
 ## 📥 Download
 
@@ -51,6 +56,7 @@ needed for the assembly**. You only have to **print the plastic parts in PLA or 
   <img src="docs/images/wiring.svg" alt="Connection diagram from PCB renders: thumb stick on CN1, side button on U7, grip U5 to GRIP_IN on the Y encoder PCB, GRIP OUT to GRIP on the base PCB, X and Y encoders on ENC_X and ENC_Y, base to the PC over USB-C" width="900">
 </p>
 
+The BASE side (encoder PCBs and base PCB) belongs to the [Polysim Base](https://github.com/p0lysim/Polysim_Base) project.
 More details are in [docs/hardware.md](docs/hardware.md).
 
 ## 💾 Firmware

@@ -9,6 +9,8 @@ and the **[assembly tutorial on YouTube](https://www.youtube.com/watch?v=2aSrMxb
 
 ## How it connects
 
+The grip is made for the **[Polysim Base](https://github.com/p0lysim/Polysim_Base)**, which holds the encoder PCBs and the base PCB.
+
 <p align="center">
   <img src="images/wiring.svg" alt="Connection diagram from the PCB renders" width="900">
 </p>

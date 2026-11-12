@@ -5,6 +5,7 @@ All notable changes to this project are documented in this file.
 ## [Unreleased]
 
 ### Added
+- Model published on MakerWorld, with its print profile; MakerWorld links added to the README badge and download table.
 - Rotating exploded-view GIF (`docs/images/grip-exploded.gif`), rendered in Blender (Cycles) from the Fusion assembly, with a step-by-step disassembly so no part passes through another.
 - "Buy the kit" button and YouTube thumbnail for the assembly tutorial; the kit text states that every component is included (print the plastic parts in PLA or PETG).
 

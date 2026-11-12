@@ -8,7 +8,7 @@
 
 [![Printables](https://img.shields.io/badge/Printables-Download-FA6831?style=for-the-badge&logo=printables&logoColor=white)](https://www.printables.com/model/1278269-3d-printable-flight-simulator-joystick-grip)
 [![Thingiverse](https://img.shields.io/badge/Thingiverse-Download-248BFB?style=for-the-badge&logo=thingiverse&logoColor=white)](https://www.thingiverse.com/thing:6879827)
-[![MakerWorld](https://img.shields.io/badge/MakerWorld-Coming%20soon-9E9E9E?style=for-the-badge&logo=bambulab&logoColor=white)](#-download)
+[![MakerWorld](https://img.shields.io/badge/MakerWorld-Download-00AE42?style=for-the-badge&logo=bambulab&logoColor=white)](https://makerworld.com/en/models/3599817-polysim-grip-3d-printable-flight-sim-joystick-grip)
 
 [![License: Sustainable Use](https://img.shields.io/badge/License-Sustainable%20Use%201.0-blue.svg)](LICENSE.md)
 ![CAD: STEP AP214](https://img.shields.io/badge/CAD-STEP%20AP214-informational)
@@ -40,8 +40,8 @@ The base reads it and sends everything to the PC over USB.</td>
 
 | Files | Folder | Printables | Thingiverse | MakerWorld |
 |---|---|---|---|---|
-| **STL** – one per part | [`cad/stl`](cad/stl) | [Download](https://www.printables.com/model/1278269-3d-printable-flight-simulator-joystick-grip) | [Download](https://www.thingiverse.com/thing:6879827) | 🕒 Coming soon |
-| **3MF** – print plates | [`cad/3mf`](cad/3mf) | — | — | 🕒 Coming soon |
+| **STL** – one per part | [`cad/stl`](cad/stl) | [Download](https://www.printables.com/model/1278269-3d-printable-flight-simulator-joystick-grip) | [Download](https://www.thingiverse.com/thing:6879827) | [Download](https://makerworld.com/en/models/3599817-polysim-grip-3d-printable-flight-sim-joystick-grip) |
+| **3MF** – print plates | [`cad/3mf`](cad/3mf) | — | — | [Print profile](https://makerworld.com/en/models/3599817-polysim-grip-3d-printable-flight-sim-joystick-grip#profileId-4124642) |
 | **STEP** – full assembly with PCB | [`cad/step`](cad/step) | — | — | — |
 
 ## 🛒 Get the kit
